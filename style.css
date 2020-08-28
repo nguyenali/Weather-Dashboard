@@ -69,3 +69,17 @@ input {
 .search h1 {
     line-height: 30px;
 }
+
+.forecast {
+    height: 40%;
+    padding: 12px 15px 15px 15px;
+    min-width: 640px;
+    margin-left: 5%;
+    border: solid 1px #cecfd2;
+    margin-top: 25px;
+}
+
+.five-day-container h1 {
+    margin-left: 5%;
+    margin-top: 25px;
+}
