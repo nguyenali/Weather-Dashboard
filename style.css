@@ -83,3 +83,38 @@ input {
     margin-left: 5%;
     margin-top: 25px;
 }
+
+.card-row {
+    flex-direction
+}
+
+.five-day-card {
+    background-color: #3498db;
+    font-size: larger;
+    color: white;
+    border-radius: 5px;
+    height: auto;
+    width: 175px;
+    margin-left: 58.5px;
+}
+
+.five-day-container .card-text {
+    margin-bottom: 15px:
+    padding: 10px 30px 5px 10px;
+}
+
+.five-day-card h3 {
+    margin: 5px;
+}
+
+.five-day-card img {
+    margin-left: 10%;
+}
+
+.historyItems {
+    margin-top: 20px;
+}
+
+.historyItems:nth-child() {
+    margin-top:20px;
+}
