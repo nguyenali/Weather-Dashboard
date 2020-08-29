@@ -123,3 +123,36 @@ img {
     height: auto;
     width: auto;
 }
+
+input {
+    width: auto;
+    height: 40px;
+}
+
+li:first-child {
+    list-style: none;
+    background-color: white;
+    border: solid 1px #cecfd2;
+    border-radius: 0px 0px 0px 0px;
+    height: 100%;
+    padding: 12px 5px 12px 15px;
+    font-size: larger;
+}
+
+li {
+    border: solid 1px #cecfd2;
+    border-radius: 6px 6px 0px 0px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
+    height: 100%;
+    font-size:larger;
+    background-color: white;
+
+}
+
+li:last-child {
+    list-style: none;
+    padding: 12px 5px 12px 15px;
+    border-radius: 0px 0px 6px 6px;
+    border: solid 1px #cecfd2;
+}
