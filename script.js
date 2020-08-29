@@ -37,4 +37,19 @@ searchBtn.on("click", function(e) {
         alert("You must enter a city");
         return;
     }
+    console.log('clicked button')
+    getWeather(searchInput.val());
+});
+
+//add in history visit
+
+
+function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, cityWeatherIcon uvVal) {
+    cityNameEl.text(cityName)
+    currentDateEl.text('(${today})')
+    tempEl.text('Temperature: ${cityTemp}'); //add in degree f
+    humidityEl.text('Humidity; ${cityHumidity}%');
+    windSpeedEl.text('Wind Speed: ${cityWindSpeed} MPH');
+    uvIndexEl.text('UV Index: $ {uvVal}');
+    weatherIconEl.attr("src", cityWeatherIcon);
 }
