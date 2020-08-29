@@ -22,3 +22,13 @@ let dd = String(today.getDate()).padstart(2,'0');
 let mm = String(today.getMonth() + 1).padstart(2.'0');
 let yyyy = today.getFullYear();
 
+
+if(JSON.parse(localStorage.getItem("searchHistory")) === null) {
+    console.log("searchHistory not found")
+} 
+else{
+    console.log("seatchHistory loaded into searchHistoryArr");
+    renderSearchHisory();
+}
+
+searchBtn.on("click")
