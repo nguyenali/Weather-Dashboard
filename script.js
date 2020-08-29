@@ -53,3 +53,27 @@ function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, city
     uvIndexEl.text('UV Index: $ {uvVal}');
     weatherIconEl.attr("src", cityWeatherIcon);
 }
+
+function getWeather(desiredCity) {
+    let queryURL =//add in link here;
+    $.ajax({
+        url:queryURL,
+        method: "GET"
+    })
+    .then(function(weatherData){
+        let cityObj = {
+            cityName: weatherData.name,
+            cityTemp: weatherData.main.temp,
+            cityHumidity: weatherData.main.humidity,
+            cityWindSpeed: weatherData.main.wind.speed,
+            cityUVIndex: weatherData.coord,
+            cityWeatherIconName: weatherData.weather[0].icon
+        }
+
+        let queryURL = //add in link
+        $.ajax({
+        url:queryURL,
+        method: "GET"
+        })
+    })
+}
