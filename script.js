@@ -31,4 +31,10 @@ else{
     renderSearchHisory();
 }
 
-searchBtn.on("click")
+searchBtn.on("click", function(e) {
+    e.preventDefault();
+    if (searchInput.val() === "") {
+        alert("You must enter a city");
+        return;
+    }
+}
