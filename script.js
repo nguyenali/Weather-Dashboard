@@ -75,5 +75,35 @@ function getWeather(desiredCity) {
         url:queryURL,
         method: "GET"
         })
+        .then(function(uvData) {
+            if(JSON.parse(localStorage.getItem(searchHistory")) == null) {
+                let searchHistoryArr = [];
+
+            if(searchHistoryArr.indexOf(cityObj,cityName) === -1) {
+                searchHistoryArr.push(cityObj.cityName);
+
+                localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
+                let renderWeatherIcon = //add in link 
+                renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
+                renderSearchHisory(cityObj.cityName);
+            }
+            else{
+                console.log("city already in searchHistory. Not adding to hisotry list")
+                let renderWeatherIcon ='add in link';
+                renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
+            }
+            } else {
+                let searchHistoryArr =JSON.parse(localStorage.getItem("searchHistory"));
+
+                if(searchHistoryArr.indexOf(cityObj,cityName) === -1) {
+                    searchHistoryArr.push(cityObj.cityName);
+
+                localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
+                let renderWeatherIcon = //add in link 
+                renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
+                renderSearchHisory(cityObj.cityName);
+            }
+
+        })
     })
 }
