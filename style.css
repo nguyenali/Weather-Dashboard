@@ -155,4 +155,18 @@ li:last-child {
     padding: 12px 5px 12px 15px;
     border-radius: 0px 0px 6px 6px;
     border: solid 1px #cecfd2;
+    background-color: white;
+    font-size: larger;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    line-height: 50%;
+    margin: 5px 5px 5px 0px;
+
+}
+
+.row * {
+    margin-right: 5px;
 }
