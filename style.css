@@ -118,3 +118,8 @@ input {
 .historyItems:nth-child() {
     margin-top:20px;
 }
+
+img {
+    height: auto;
+    width: auto;
+}
