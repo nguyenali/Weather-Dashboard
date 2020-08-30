@@ -5,6 +5,7 @@
 body {
   height: 100%;
   margin: 0;
+  background-color: #c7edfc ;
 }
 
 button{
@@ -30,7 +31,7 @@ button:focus {
 }
 
 header {
-    background-color: #2f3640;
+    background-color: #0093ce;
     color: white;
     text-align: center;
     height: 100px;
@@ -53,7 +54,7 @@ html{
 }
 
 input {
-    border: 1px solid #cecfd2;
+    border: 1px solid #55cbfa;
     border-radius: 5px;
 }
 
