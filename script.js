@@ -109,13 +109,13 @@ function getWeather(desiredCity) {
             } else {
                 let searchHistoryArr =JSON.parse(localStorage.getItem("searchHistory"));
 
-                if(searchHistoryArr.indexOf(cityObj,cityName) === -1) {
+                if (searchHistoryArr.indexOf(cityObj.cityName) === -1) {
                     searchHistoryArr.push(cityObj.cityName);
 
-                localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
-                let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
-                renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
-                renderSearchHisory(cityObj.cityName);
+                    localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
+                    let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
+                    renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
+                    renderSearchHistory(cityObj.cityName);
             } 
             else{
                 console.log("City already in searchHistory. Not adding to history list")
@@ -160,7 +160,7 @@ function getWeather(desiredCity) {
 
 function createForecastCard(date, icon, temp, humidity) {
 
-    let fiveCardEl = $("<div>").attr("class", "five-day-card");
+    let fiveDayCardEl = $("<div>").attr("class", "five-day-card");
     let cardDate =$("<h3>").attr("class", "card-text");
     let cardIcon = $("<img>").attr("class", "weatherIcon");
     let cardTemp = $("<p>").attr("class", "card-text");
@@ -171,6 +171,6 @@ function createForecastCard(date, icon, temp, humidity) {
     cardIcon.attr("src", icon);
     cardTemp.text(`Temp: ${temp} °F`); 
     cardHumidity.text(`Humidity: ${humidity}%`);
-    fiveCardEl.append(cardDate, cardIcon. cardTemp, cardHumidity);
+    fiveDayCardEl.append(cardDate, cardIcon. cardTemp, cardHumidity);
 
 }
