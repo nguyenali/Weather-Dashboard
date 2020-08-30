@@ -11,7 +11,7 @@ A website that shows weather outlooks in multiple cities.
 
 
 ## Website
-**to put in link
+https://nguyenali.github.io/Weather-Dashboard/.
 
 ## Contribution
 Made with ❤️ by Ali Nguyen
