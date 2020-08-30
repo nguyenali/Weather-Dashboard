@@ -1,4 +1,4 @@
-let apiKey = "7893de962a3dc6dbd26fc40b182deede";
+  let apiKey = "3ac0d8db34de82819d13a9167239acc1";
 let searchBtn = $(".searchBtn");
 let searchInput = $(".searchInput");
 
