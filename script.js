@@ -41,8 +41,21 @@ searchBtn.on("click", function(e) {
     getWeather(searchInput.val());
 });
 
-//add in history visit
+$(document).on("click", ".historyEntry", function(){
+    console.log("clicked history item")
+    let thisElement =$(this);
+    getWeather(thisElement.text());
+})
 
+function renderSearchHisory(cityName) {
+    searchHistoryEl.empty();
+    let searchHistoryArr = JSON.parse(localStorage.getItem("searchHistory"));
+    for (let i=0; i < searchHistoryArr.length; i++) {
+        let newListItem = $("<li>").attr("class", "historyEntry");
+        newListItem.text(searchHistoryArr[i]);
+        searchHistoryEl.prepenr(newListItem);
+    }
+}
 
 
 function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, cityWeatherIcon uvVal) {
