@@ -2,11 +2,12 @@
 put in screenshot when done
 
 ## Purpose
-A website that shows weather outlooks in multiple cities
+A website that shows weather outlooks in multiple cities.
 
 ## Built With
-* HTML
-* CSS
+*JS
+*CSS
+*HTML
 
 
 ## Website
