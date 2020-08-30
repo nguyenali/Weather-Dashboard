@@ -5,9 +5,10 @@ put in screenshot when done
 A website that shows weather outlooks in multiple cities.
 
 ## Built With
-*JS
-*CSS
-*HTML
+* JS
+* HTMl
+* CSS
+
 
 
 ## Website
