@@ -27,7 +27,7 @@ button:focus {
 }
 
 header {
-    background-color: navy;
+    background-color: #2f3640;
     color: white;
     text-align: center;
     height: 100px;
@@ -85,7 +85,8 @@ input {
 }
 
 .card-row {
-    flex-direction
+    display: flex;
+    flex-direction:row;
 }
 
 .five-day-card {
@@ -99,7 +100,7 @@ input {
 }
 
 .five-day-container .card-text {
-    margin-bottom: 15px:
+    margin-bottom: 15px;
     padding: 10px 30px 5px 10px;
 }
 
