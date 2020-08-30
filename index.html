@@ -13,58 +13,54 @@
 
 <body>
 
-    <header>
+  <header class="header">
         <h1>Weather Dashboard</h1>
   </header>
 
   <div class= "container">
-
-    <div class="row">
-      <h1>Search for a City</h1>
+    <div class="search">
+      <div class="row">
+        <h1>Search for a City</h1>
+      </div>
+      <div class="row">
+        <input type="text" class="searchInput" placeholder="Enter a city here"> 
+        <button type="submit" class="searchBtn">
+        <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="historyItems"></div>
     </div>
-    <div>
-      <input type="text" class="searchInput" placeholder="Enter a city here"> 
-      <button type="submit" class="searchBtn">
-        <i class=" fas fa-search"></i>
-      </button>
-    </div>
-
-
     <div class="col-two-container">
-      <div class forecast>
+      <div class="forecast">
         <div class="row">
-          <h1 class="city">City</h1>
-          <h1 class="currentDate">Date</h1>
-          <img class="weatherIcon">Weather icon</img>
+          <h1 class="cityName">City name</h1>
+          <h1 class="currentDate"></h1>
+          <img class="weatherIcon"></img>
         </div>
 
         <div class="row">
           <p class="temp">Temperature:</p>
         </div>
         <div class="row">
-          <p class="Humidity">Humidity:</p>
+          <p class="humidity">Humidity:</p>
         </div>
         <div class="row">
-          <p class="Wind">Wind Speed:</p>
+          <p class="windSpeed">Wind Speed:</p>
         </div>
         <div class="row">
-          <p class="UV">UV Index:</p>
-        </div>
-
-        <div class="5-day projection-container">
-          <h1>5 Day Weather Projection</h1>
-          <div class="card row"></div>
+          <p class="uvIndex">UV Index:</p>
         </div>
       </div>
+
+        <div class="five-day-container">
+          <h1>5 Day Weather Projection</h1>
+          <div class="card-row">
+          </div>
+        </div>
     </div>
   </div>
 
-
-
-
-    
-    
 </body>
-
 <script src="./script.js"></script>
 </html>
+

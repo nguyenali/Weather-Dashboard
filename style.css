@@ -1,18 +1,21 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
   height: 100%;
   margin: 0;
 }
 
 button{
+    width: 70px;
+    height: auto;
     transition-duration: .4s;
     border: none;
     border-radius: 5px;
     background-color: #ff9f43;
-    height: auto;
-    width: 70px;
+    transition-duration: .4s;
+    
 }
 
 
@@ -62,7 +65,7 @@ input {
 }
 
 .search {
-    padding:25px;
+    padding: 25px;
     background-color: #f5f6fa;
 }
 
@@ -72,10 +75,10 @@ input {
 
 .forecast {
     height: 40%;
+    border: solid 1px #cecfd2;
     padding: 12px 15px 15px 15px;
     min-width: 640px;
     margin-left: 5%;
-    border: solid 1px #cecfd2;
     margin-top: 25px;
 }
 
@@ -142,7 +145,7 @@ li:first-child {
 
 li {
     border: solid 1px #cecfd2;
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     padding: 12px 5px 12px 15px;
     list-style: none;
     height: 100%;

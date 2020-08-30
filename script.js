@@ -1,6 +1,6 @@
+let apiKey = "3ac0d8db34de82819d13a9167239acc1";
 let searchInput = $ (".searchInput");
 let searchBtn = $(".searchBtn");
-let apiKey = "3ac0d8db34de82819d13a9167239acc1"
 
 
 let searchHistoryEl =$(".historyItems");
@@ -10,7 +10,7 @@ let cityNameEl = $(".cityName");
 
 
 let windSpeedEl = $(".windSpeed");
-let uvIndexEl = $(".windspeed");
+let uvIndexEl = $(".uvIndex");
 let cardRow = $(".card-row");
 let tempEl = $(".temp");
 let humidityEl = $(".humidity");
@@ -19,7 +19,7 @@ let humidityEl = $(".humidity");
 var today = new Date ();
 var today = mm + '/' + dd + '/' + yyyy;
 let dd = String(today.getDate()).padstart(2,'0');
-let mm = String(today.getMonth() + 1).padstart(2.'0');
+let mm = String(today.getMonth() + 1).padstart(2, '0');
 let yyyy = today.getFullYear();
 
 
@@ -27,7 +27,7 @@ if(JSON.parse(localStorage.getItem("searchHistory")) === null) {
     console.log("searchHistory not found")
 } 
 else{
-    console.log("seatchHistory loaded into searchHistoryArr");
+    console.log("searchHistory loaded into searchHistoryArr");
     renderSearchHisory();
 }
 
@@ -43,7 +43,7 @@ searchBtn.on("click", function(e) {
 
 $(document).on("click", ".historyEntry", function(){
     console.log("clicked history item")
-    let thisElement =$(this);
+    let thisElement = $(this);
     getWeather(thisElement.text());
 })
 
@@ -53,25 +53,25 @@ function renderSearchHisory(cityName) {
     for (let i=0; i < searchHistoryArr.length; i++) {
         let newListItem = $("<li>").attr("class", "historyEntry");
         newListItem.text(searchHistoryArr[i]);
-        searchHistoryEl.prepenr(newListItem);
+        searchHistoryEl.prepend(newListItem);
     }
 }
 
 
-function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, cityWeatherIcon uvVal) {
+function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, cityWeatherIcon, uvVal) {
     cityNameEl.text(cityName)
-    currentDateEl.text('(${today})')
-    tempEl.text('Temperature: ${cityTemp} °F`'); 
-    humidityEl.text('Humidity; ${cityHumidity}%');
-    windSpeedEl.text('Wind Speed: ${cityWindSpeed} MPH');
-    uvIndexEl.text('UV Index: $ {uvVal}');
+    currentDateEl.text(`(${today})`)
+    tempEl.text(`Temperature: ${cityTemp} °F`); 
+    humidityEl.text(`Humidity; ${cityHumidity}%`);
+    windSpeedEl.text(`Wind Speed: ${cityWindSpeed} MPH`);
+    uvIndexEl.text(`UV Index: ${uvVal}`);
     weatherIconEl.attr("src", cityWeatherIcon);
 }
 
 function getWeather(desiredCity) {
-    let queryURL = 'https://api.openweathermap.org/data/2.5/uvi?lat=${cityObj.cityUVIndex.lat}&lon=${cityObj.cityUVIndex.lon}&APPID=${apiKey}&units=imperial'
+    let queryURL = 'https://api.openweathermap.org/data/2.5/uvi?lat=${cityObj.cityUVIndex.lat}&lon=${cityObj.cityUVIndex.lon}&APPID=${apiKey}&units=imperial';
     $.ajax({
-        url:queryURL,
+        url: queryURL,
         method: "GET"
     })
     .then(function(weatherData){
@@ -101,9 +101,10 @@ function getWeather(desiredCity) {
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
                 renderSearchHisory(cityObj.cityName);
             }else{
-                console.log("city already in searchHistory. Not adding to hisotry list")
+                console.log("city already in searchHistory. Not adding to history list")
                 let renderWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
+            
             }
             } else {
                 let searchHistoryArr =JSON.parse(localStorage.getItem("searchHistory"));
@@ -157,11 +158,7 @@ function getWeather(desiredCity) {
 
 
 
-
-
-
-
-function createForecastCard( date, icon, temp, humidity) {
+function createForecastCard(date, icon, temp, humidity) {
 
     let fiveCardEl = $("<div>").attr("class", "five-day-card");
     let cardDate =$("<h3>").attr("class", "card-text");
@@ -169,10 +166,10 @@ function createForecastCard( date, icon, temp, humidity) {
     let cardTemp = $("<p>").attr("class", "card-text");
     let cardHumidity =$("<p>").attr("class", "card-text");
 
-    cardRow.append(fiveCardEl);
+    cardRow.append(fiveCDayCardEl);
     cardDate.text(date);
     cardIcon.attr("src", icon);
-    cardTemp.text('Temp: ${temp} °F'); 
+    cardTemp.text(`Temp: ${temp} °F`); 
     fiveCardEl.append(cardDate, cardIcon. cardTemp, cardHumidity);
 
 }
