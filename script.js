@@ -1,6 +1,6 @@
 let searchInput = $ (".searchInput");
 let searchBtn = $(".searchBtn");
-let apiKey = "3a"
+let apiKey = "3ac0d8db34de82819d13a9167239acc1"
 
 
 let searchHistoryEl =$(".historyItems");
@@ -42,6 +42,7 @@ searchBtn.on("click", function(e) {
 });
 
 //add in history visit
+
 
 
 function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, cityWeatherIcon uvVal) {
@@ -106,4 +107,21 @@ function getWeather(desiredCity) {
 
         })
     })
+}
+
+
+function createForecastCard( date, icon, temp, humidity) {
+
+    let fiveCardEl = $("<div>").attr("class", "five-day-card");
+    let cardDate =$("<h3>").attr("class", "card-text");
+    let cardIcon = $("<img>").attr("class", "weatherIcon");
+    let cardTemp = $("<p>").attr("class", "card-text");
+    let cardHumidity =$("<p>").attr("class", "card-text");
+
+    cardRow.append(fiveCardEl);
+    cardDate.text(date);
+    cardIcon.attr("src", icon);
+    cardTemp.text('Temp: ${temp}'); //add in degree f
+    fiveCardEl.append(cardDate, cardIcon. cardTemp, cardHumidity);
+
 }
