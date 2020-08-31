@@ -28,7 +28,7 @@ if(JSON.parse(localStorage.getItem("searchHistory")) === null) {
 } 
 else{
     console.log("searchHistory loaded into searchHistoryArr");
-    renderSearchHisory();
+    rendersearchHistory();
 }
 
 searchBtn.on("click", function(e) {
@@ -47,7 +47,7 @@ $(document).on("click", ".historyEntry", function(){
     getWeather(thisElement.text());
 })
 
-function renderSearchHisory(cityName) {
+function rendersearchHistory(cityName) {
     searchHistoryEl.empty();
     let searchHistoryArr = JSON.parse(localStorage.getItem("searchHistory"));
     for (let i=0; i < searchHistoryArr.length; i++) {
@@ -99,7 +99,7 @@ function getWeather(desiredCity) {
                 localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
                 let WeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
-                renderSearchHisory(cityObj.cityName);
+                rendersearchHistory(cityObj.cityName);
             }else{
                 console.log("city already in searchHistory. Not adding to history list")
                 let WeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
@@ -115,7 +115,7 @@ function getWeather(desiredCity) {
                     localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
                     let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                     renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
-                    renderSearchHistory(cityObj.cityName);
+                    rendersearchHistory(cityObj.cityName);
             } 
             else{
                 console.log("City already in searchHistory. Not adding to history list")
