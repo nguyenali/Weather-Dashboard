@@ -93,16 +93,16 @@ function getWeather(desiredCity) {
             if(JSON.parse(localStorage.getItem("searchHistory")) == null) {
                 let searchHistoryArr = [];
 
-            if(searchHistoryArr.indexOf(cityObj,cityName) === -1) {
+            if(searchHistoryArr.indexOf(cityObj.cityName) === -1) {
                 searchHistoryArr.push(cityObj.cityName);
 
                 localStorage.setItem("searchHistory", JSON.stringify(searchHistoryArr));
-                let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
+                let WeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
                 renderSearchHisory(cityObj.cityName);
             }else{
                 console.log("city already in searchHistory. Not adding to history list")
-                let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
+                let WeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderWeatherIcon, uvData.value);
             
             }
