@@ -2,20 +2,20 @@ let apiKey = "3ac0d8db34de82819d13a9167239acc1";
 let searchBtn = $(".searchBtn");
 let searchInput = $(".searchInput");
 
-
+//Search Column Variables
 let searchHistoryEl =$(".historyItems");
 let weatherIconEl = $(".weatherIcon");
 let currentDateEl = $(".currentDate");
 let cityNameEl = $(".cityName");
 
-
+//Current City Column Variables
 let windSpeedEl = $(".windSpeed");
 let uvIndexEl = $(".uvIndex");
 let cardRow = $(".card-row");
 let tempEl = $(".temp");
 let humidityEl = $(".humidity");
 
-
+//Current Date Variables
 var today = new Date ();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -159,7 +159,7 @@ function getWeather(desiredCity) {
 
 
 function createForecastCard(date, icon, temp, humidity) {
-
+//Five Day Forecast Variable
     let fiveDayCardEl = $("<div>").attr("class", "five-day-card");
     let cardDate =$("<h3>").attr("class", "card-text");
     let cardIcon = $("<img>").attr("class", "weatherIcon");
