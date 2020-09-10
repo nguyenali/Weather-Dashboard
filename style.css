@@ -1,177 +1,65 @@
+
 * {
     box-sizing: border-box;
 }
-
+  
 body {
-  height: 100%;
-  margin: 0;
-  background-color: #c7edfc ;
+margin: 0;
+padding: 0;
+line-height: 2.5;
+font-size: 20px;
 }
 
-button{
-    width: 70px;
-    height: auto;
-    transition-duration: .4s;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff9f43;
-    transition-duration: .4s;
-    
+.jumbotron {
+
+    padding: 20px;
+
 }
 
-
-button:hover {
-    background-color: #feca57;
+h1 {
+    font-size: 35px;
 }
 
-button:focus {
-    border: none;
-    outline-color: #b2bec3;
-    
-}
-
-header {
-    background-color: #0093ce;
-    color: white;
-    text-align: center;
-    height: 100px;
-    width: 100%;
-    font-size: xx-large;
-    margin-top: 0;
-}
-
-h1,h3,p,li {
-    font-family: 'Roboto', sans-serif;
-}
-
-header h1 {
-    margin: 0;
-    padding-top: 10px;
-}
-
-html{
-    height: 100%;
+h3 {
+    font-size: 18rpx;
 }
 
 input {
-    border: 1px solid #55cbfa;
-    border-radius: 5px;
+    width: 70%;
+    padding: 4px;
+    border: 2px solid gainsboro;
+    border-radius: 4px;
+}
+ 
+i {
+    font-size: 20px;
+    padding: 9px 2px;
 }
 
-.container {
+main {
+    padding: 10px;
+}
+
+.flex-row {
     display: flex;
-    flex-direction: row;
-    max-width: 640px;
-    height: 100%;
+    flex-wrap: wrap;
 }
-
-.search {
-    padding: 25px;
-    background-color: #f5f6fa;
-}
-
-.search h1 {
-    line-height: 30px;
-}
-
-.forecast {
-    height: 40%;
-    border: solid 1px #cecfd2;
-    padding: 12px 15px 15px 15px;
-    min-width: 640px;
-    margin-left: 5%;
-    margin-top: 25px;
-}
-
-.five-day-container h1 {
-    margin-left: 5%;
-    margin-top: 25px;
-}
-
-.card-row {
+  
+.flex-column {
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.five-day-card {
-    background-color: #3498db;
-    font-size: larger;
-    color: white;
-    border-radius: 5px;
-    height: auto;
-    width: 175px;
-    margin-left: 58.5px;
+.card {
+    padding: 10px 10px;
+    margin-bottom: 20px;
 }
 
-.five-day-container .card-text {
-    margin-bottom: 15px;
-    padding: 10px 30px 5px 10px;
+.card-deck {
+    padding: 5px 2px;
 }
 
-.five-day-card h3 {
-    margin: 5px;
-}
-
-.five-day-card img {
-    margin-left: 10%;
-}
-
-.historyItems {
-    margin-top: 20px;
-}
-
-.historyItems:nth-child() {
-    margin-top:20px;
-}
-
-img {
-    height: auto;
-    width: auto;
-}
-
-input {
-    width: auto;
-    height: 40px;
-}
-
-li:first-child {
-    list-style: none;
-    background-color: white;
-    border: solid 1px #cecfd2;
-    border-radius: 0px 0px 0px 0px;
-    height: 100%;
-    padding: 12px 5px 12px 15px;
-    font-size: larger;
-}
-
-li {
-    border: solid 1px #cecfd2;
-    border-radius: 0px 0px 0px 0px;
-    padding: 12px 5px 12px 15px;
-    list-style: none;
-    height: 100%;
-    font-size:larger;
-    background-color: white;
-
-}
-
-li:last-child {
-    list-style: none;
-    padding: 12px 5px 12px 15px;
-    border-radius: 0px 0px 6px 6px;
-    border: solid 1px #cecfd2;
-    background-color: white;
-    font-size: larger;
-    height: 100%;
-}
-
-.row {
-    display: flex;
-    line-height: 50%;
-    margin: 5px 5px 5px 0px;
-
-}
-
-.row * {
-    margin-right: 5px;
+.bg-orange {
+    background-color: orange;
 }
